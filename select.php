@@ -19,6 +19,8 @@ class Index extends Component
          if($this->name){
            dd($this->name,$this->attr);
          }
+
+         //yahan bhi aa sakte hai  agar select ka data save karna hai
     }
 
 
@@ -29,6 +31,7 @@ class Index extends Component
         if($this->name){
             dd("swagnera desi");
         }
+        //yahan bhi aa sakte hai age frontnedn pe koi change karna hai
 
         $query = User::query();
 
