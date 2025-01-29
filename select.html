@@ -1,0 +1,24 @@
+<select  attr="rohit"  wire:model="name" wire:change="handleSelectChange" id="select">
+    <option>select</option>
+      <option value="1" data-attr="father">Vikram</option>
+      <option value="2" data-attr="sister">Sheela</option>
+      <option value="3" data-attr="sister">Neelu</option>
+      <option value="4" data-attr="mother">Mother</option>
+    </select>
+  </div>
+
+  <!-- include J query if you want -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+document.getElementById('select').addEventListener('change', function () {
+  // Get the selected option and its custom attribute
+  let selectedOption = this.options[this.selectedIndex];
+  let attr = selectedOption.getAttribute('data-attr');
+  
+  // Pass both the selected value and the custom attribute to Livewire
+ 
+  @this.set('attr', attr);//this is for the extrathing you want
+});
+</script>
+  
